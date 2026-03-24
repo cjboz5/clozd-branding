@@ -663,26 +663,17 @@ a { color: inherit; }
   padding: 24px;
 }
 
-.gif-placeholder-inner {
-  text-align: center;
-  max-width: 520px;
+.gif-demo-frame {
+  border: 1px solid rgba(39,79,219,0.12);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(20,166,248,0.04) 100%);
+  overflow: hidden;
 }
 
-.gif-placeholder-inner span {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--royal);
-  margin-bottom: 10px;
-}
-
-.gif-placeholder-inner small {
+.gif-demo-image {
   display: block;
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.65;
+  width: 100%;
+  height: auto;
 }
 
 .trigger-options {
@@ -1338,16 +1329,19 @@ a { color: inherit; }
         <div class="gif-demo-card">
           <div class="gif-demo-label">Demo walkthrough</div>
           <h3>Show reps how to connect the Marketing folder in Cowork</h3>
-          <p>Drop in a GIF here that shows: <strong>Claude desktop → Cowork → + in the chat box → select / connect the Marketing folder</strong>.</p>
-  
-          <div class="gif-placeholder">
-            <div class="gif-placeholder-inner">
-              <span>GIF PLACEHOLDER</span>
-              <small>Add a walkthrough showing how to navigate to Cowork and give Claude access to the desktop Marketing folder.</small>
+          <p>
+            This video shows how to give Claude access to the <strong>Marketing</strong> folder in
+            <strong>Cowork</strong> so it can use Clozd-branded assets when creating deliverables.
+          </p>
+
+          <div class="gif-demo-frame">
+            <img
+              src="video/marketing-folder-claude.gif"
+              alt="Video walkthrough showing how to give Claude access to the Marketing folder in Cowork"
+              class="gif-demo-image"
+            />
           </div>
         </div>
-      </div>
-    </div>
 
     <div class="setup-block">
       <div class="access-col-label">How to use it moving forward</div>
