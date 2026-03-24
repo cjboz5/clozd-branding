@@ -593,6 +593,192 @@ a { color: inherit; }
 .prompt-chip.royal-accent,
 .wf-chip.r { border-left: 3px solid var(--royal); }
 
+.access-body-stacked {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.setup-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.setup-intro-card,
+.repeat-intro {
+  font-size: 15px;
+  color: var(--body);
+  line-height: 1.75;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(20,166,248,0.04) 100%);
+  border: 1px solid rgba(39,79,219,0.10);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.setup-intro-card strong,
+.repeat-intro strong {
+  color: var(--black);
+}
+
+.gif-demo-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(9,212,200,0.03) 100%);
+  padding: 22px;
+}
+
+.gif-demo-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--patina);
+  margin-bottom: 8px;
+}
+
+.gif-demo-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+  letter-spacing: -.2px;
+}
+
+.gif-demo-card p {
+  font-size: 15px;
+  color: var(--body);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.gif-placeholder {
+  border: 1.5px dashed rgba(39,79,219,0.20);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(20,166,248,0.04) 100%);
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gif-placeholder-inner {
+  text-align: center;
+  max-width: 520px;
+}
+
+.gif-placeholder-inner span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--royal);
+  margin-bottom: 10px;
+}
+
+.gif-placeholder-inner small {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.trigger-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.trigger-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(20,166,248,0.03) 100%);
+  box-shadow: 0 4px 18px rgba(20,166,248,0.05);
+}
+
+.trigger-card:nth-child(2) {
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(9,212,200,0.03) 100%);
+}
+
+.trigger-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--royal);
+  background: rgba(39,79,219,0.08);
+  border: 1px solid rgba(39,79,219,0.12);
+  border-radius: 999px;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+}
+
+.trigger-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+  letter-spacing: -.2px;
+}
+
+.trigger-card p {
+  font-size: 15px;
+  color: var(--body);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.trigger-example {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 15px;
+  color: var(--royal);
+  background: rgba(39,79,219,0.06);
+  border: 1px solid rgba(39,79,219,0.14);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.trigger-subcopy {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.repeat-flow-card {
+  border: 1px solid rgba(9,212,200,0.18);
+  border-radius: 14px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(9,212,200,0.05) 0%, rgba(20,166,248,0.05) 100%);
+}
+
+.repeat-flow-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--patina);
+  margin-bottom: 10px;
+}
+
+.repeat-flow-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 980px) {
+  .trigger-options {
+    grid-template-columns: 1fr;
+  }
+}
 .section-banner {
   border-radius: 16px;
   overflow: hidden;
@@ -1137,39 +1323,91 @@ a { color: inherit; }
     <div class="access-banner">
       <div class="access-banner-inner">
         <div class="access-banner-label">Getting started</div>
-        <h2>Set it up in five steps</h2>
-        <p>This is the actual workflow: download the Marketing folder, give Claude access to it, trigger the design system skill, give Claude the content, and get a polished Clozd-branded deliverable.</p>
+        <h2>Set up Clozd branding once, then reuse it anytime</h2>
+        <p>The first time, you’ll use <strong>Cowork</strong> to give Claude access to the <strong>Marketing</strong> folder on your desktop. After that, you can keep creating Clozd-branded outputs with either a slash command or a plain-English prompt.</p>
       </div>
     </div>
-    <div class="access-body">
-      <div>
-        <div class="access-col-label">Core workflow</div>
-        <div class="step-list">
-          <div class="step-item"><div class="step-num">1</div><p><strong>Download the Marketing folder</strong> to your desktop using the ZIP link above, then unzip it so the folder lives on your desktop. It should contain the Clozd slide backgrounds, icons, and logos.</p></div>
-          <div class="step-item"><div class="step-num">2</div><p><strong>Give Claude access</strong> to the newly downloaded <strong>Marketing</strong> folder on your desktop so Claude can reference those brand assets while building your output.</p></div>
-          <div class="step-item"><div class="step-num">3</div><p><strong>Trigger the design system skill</strong> using the plugin path, the slash command <strong>/applying-clozd-design-system</strong>, or by clearly asking for a Clozd-branded output in plain English.</p></div>
-          <div class="step-item"><div class="step-num">4</div><p><strong>Give Claude the content</strong> — a topic, notes, transcript, research, rough draft, or existing presentation.</p></div>
-          <div class="step-item"><div class="step-num">5</div><p><strong>Get the branded deliverable</strong> — Claude applies Clozd's design system and produces a polished deck, document, one-pager, landing page, or other asset.</p></div>
+  
+    <div class="access-body access-body-stacked">
+      <div class="setup-block">
+        <div class="access-col-label">First-time setup</div>
+        <div class="setup-intro-card">
+          <strong>Important:</strong> Anytime you want Claude to use a folder from your desktop, you need to go through <strong>Cowork</strong>. That is how Claude gets access to the <strong>Marketing</strong> folder and its Clozd brand assets.
         </div>
-      </div>
-      <div>
-        <div class="access-col-label">Fastest ways to trigger it</div>
-        <ul class="launch-list">
-          <li><strong>Plugin path</strong> — Open <strong>Claude desktop</strong>, click <strong>Cowork</strong>, click the <strong>+</strong> in the chat box, hover over <strong>Plugins</strong>, and select <strong>applying-clozd-design-system</strong>.</li>
-          <li><strong>Slash command</strong> — Type <strong>/applying-clozd-design-system</strong> in the chat box, then give Claude your content or brief.</li>
-          <li><strong>Natural language</strong> — Ask Claude to create something and include phrases like <strong>make it Clozd-branded</strong> or <strong>apply Clozd branding</strong>.</li>
-        </ul>
-        <div class="prompt-examples">
-          <div class="prompt-examples-label">Try prompts like</div>
-          <div class="prompt-chips">
-            <span class="prompt-chip teal-accent">Use the Marketing folder on my desktop and make this Clozd-branded</span>
-            <span class="prompt-chip blue-accent">Apply Clozd branding to this deck using the desktop Marketing assets</span>
-            <span class="prompt-chip royal-accent">Turn this into a Clozd one-pager with the design system</span>
+  
+        <div class="step-list">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <p><strong>Download the Marketing folder</strong> using the ZIP link above, then unzip it so the <strong>Marketing</strong> folder lives on your desktop.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <p><strong>Open Claude desktop and use Cowork</strong> to give Claude access to that desktop folder. Any time a desktop folder is involved, <strong>Cowork is required</strong>.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <p><strong>Select the Marketing folder</strong> so Claude can use the official Clozd logos, slide backgrounds, and icons when creating branded outputs.</p>
+          </div>
+        </div>
+  
+        <div class="gif-demo-card">
+          <div class="gif-demo-label">Demo walkthrough</div>
+          <h3>Show reps how to connect the Marketing folder in Cowork</h3>
+          <p>Drop in a GIF here that shows: <strong>Claude desktop → Cowork → + in the chat box → select / connect the Marketing folder</strong>.</p>
+  
+          <div class="gif-placeholder">
+            <div class="gif-placeholder-inner">
+              <span>GIF PLACEHOLDER</span>
+              <small>Add a walkthrough showing how to navigate to Cowork and give Claude access to the desktop Marketing folder.</small>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="setup-block">
+      <div class="access-col-label">How to use it moving forward</div>
+      <div class="repeat-intro">
+        Once the folder is connected, this is how you replicate the workflow every time you want a Clozd-branded output.
+      </div>
+
+      <div class="trigger-options">
+        <div class="trigger-card">
+          <div class="trigger-number">Option 1</div>
+          <h3>Use the slash command</h3>
+          <p>This is the fastest explicit way to trigger the Clozd branding skill.</p>
+          <div class="trigger-example">
+            <strong>/applying-clozd-design-system</strong>
+          </div>
+          <div class="trigger-subcopy">Then add your ask, topic, draft, deck, notes, or source material.</div>
+        </div>
+
+        <div class="trigger-card">
+          <div class="trigger-number">Option 2</div>
+          <h3>Prompt Claude in plain English</h3>
+          <p>You can also just ask for what you want and tell Claude to make it Clozd-branded.</p>
+          <div class="prompt-chips">
+            <span class="prompt-chip teal-accent">make this Clozd-branded</span>
+            <span class="prompt-chip blue-accent">apply Clozd branding to this deck</span>
+            <span class="prompt-chip royal-accent">turn this into a Clozd one-pager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="repeat-flow-card">
+        <div class="repeat-flow-label">Simple repeatable workflow</div>
+        <div class="repeat-flow-line">
+          <span class="flow-chip">connect folder once in Cowork</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-chip">use slash command or plain English</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-chip">paste content</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-chip">get a Clozd-branded output</span>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
   <div class="section-banner" id="how-it-works">
     <div class="section-banner-inner">
